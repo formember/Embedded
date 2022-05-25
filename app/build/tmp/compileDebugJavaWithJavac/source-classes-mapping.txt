@@ -1,0 +1,86 @@
+com/zxing/view/ViewfinderResultPointCallback.java
+ com.zxing.view.ViewfinderResultPointCallback
+com/zxing/decoding/DecodeFormatManager.java
+ com.zxing.decoding.DecodeFormatManager
+com/qrcode/databinding/CaptureBinding.java
+ com.qrcode.databinding.CaptureBinding
+com/model/Record.java
+ com.model.Record
+com/zxing/activity/CaptureActivity.java
+ com.zxing.activity.CaptureActivity
+ com.zxing.activity.CaptureActivity$1
+ com.zxing.activity.CaptureActivity$2
+com/MyApplication.java
+ com.MyApplication
+com/zxing/camera/PlanarYUVLuminanceSource.java
+ com.zxing.camera.PlanarYUVLuminanceSource
+com/database/DBOpenHelper.java
+ com.database.DBOpenHelper
+com/qrcode/databinding/ImgdalogBinding.java
+ com.qrcode.databinding.ImgdalogBinding
+com/zxing/decoding/InactivityTimer.java
+ com.zxing.decoding.InactivityTimer
+ com.zxing.decoding.InactivityTimer$1
+ com.zxing.decoding.InactivityTimer$DaemonThreadFactory
+com/zxing/decoding/DecodeThread.java
+ com.zxing.decoding.DecodeThread
+com/zxing/decoding/DecodeHandler.java
+ com.zxing.decoding.DecodeHandler
+com/zxing/camera/CameraManager.java
+ com.zxing.camera.CameraManager
+com/zxing/camera/FlashlightManager.java
+ com.zxing.camera.FlashlightManager
+com/qrcode/databinding/ItemListBinding.java
+ com.qrcode.databinding.ItemListBinding
+com/qrcode/databinding/ActivityRecordBinding.java
+ com.qrcode.databinding.ActivityRecordBinding
+com/qrcode/databinding/ActivityRegisterBinding.java
+ com.qrcode.databinding.ActivityRegisterBinding
+com/zxing/encoding/EncodingHandler.java
+ com.zxing.encoding.EncodingHandler
+com/model/User.java
+ com.model.User
+com/data/Data.java
+ com.data.Data
+com/zxing/decoding/Intents.java
+ com.zxing.decoding.Intents
+ com.zxing.decoding.Intents$Encode
+ com.zxing.decoding.Intents$Scan
+ com.zxing.decoding.Intents$SearchBookContents
+ com.zxing.decoding.Intents$Share
+ com.zxing.decoding.Intents$WifiConnect
+com/zxing/camera/AutoFocusCallback.java
+ com.zxing.camera.AutoFocusCallback
+com/qrcode/databinding/ActivityMain1Binding.java
+ com.qrcode.databinding.ActivityMain1Binding
+com/zxing/decoding/FinishListener.java
+ com.zxing.decoding.FinishListener
+com/zxing/camera/CameraConfigurationManager.java
+ com.zxing.camera.CameraConfigurationManager
+com/zxing/camera/PreviewCallback.java
+ com.zxing.camera.PreviewCallback
+com/qrcode/MainActivity.java
+ com.qrcode.MainActivity
+ com.qrcode.MainActivity$1
+ com.qrcode.MainActivity$2
+com/zxing/decoding/CaptureActivityHandler.java
+ com.zxing.decoding.CaptureActivityHandler
+ com.zxing.decoding.CaptureActivityHandler$State
+com/qrcode/databinding/MainBinding.java
+ com.qrcode.databinding.MainBinding
+com/qrcode/BuildConfig.java
+ com.qrcode.BuildConfig
+com/zxing/view/ViewfinderView.java
+ com.zxing.view.ViewfinderView
+com/qrcode/RegisterActivity.java
+ com.qrcode.RegisterActivity
+ com.qrcode.RegisterActivity$1
+ com.qrcode.RegisterActivity$2
+ com.qrcode.RegisterActivity$3
+ com.qrcode.RegisterActivity$4
+com/qrcode/MainActivity1.java
+ com.qrcode.MainActivity1
+ com.qrcode.MainActivity1$1
+ com.qrcode.MainActivity1$2
+com/qrcode/RecordActivity.java
+ com.qrcode.RecordActivity

@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_record.xml",
+        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\activity_record.xml"
+    },
+    {
+        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\capture.xml",
+        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\capture.xml"
+    },
+    {
+        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\main.xml",
+        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_register.xml",
+        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main1.xml",
+        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\activity_main1.xml"
+    },
+    {
+        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\imgdalog.xml",
+        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\imgdalog.xml"
+    },
+    {
+        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_list.xml",
+        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\item_list.xml"
+    }
+]
