@@ -22,10 +22,10 @@ public final class ActivityMain1Binding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final Button btnLogin;
+  public final Button NFCbutton;
 
   @NonNull
-  public final Button button2;
+  public final Button btnLogin;
 
   @NonNull
   public final Button button3;
@@ -57,14 +57,14 @@ public final class ActivityMain1Binding implements ViewBinding {
   @NonNull
   public final TextView text;
 
-  private ActivityMain1Binding(@NonNull LinearLayout rootView, @NonNull Button btnLogin,
-      @NonNull Button button2, @NonNull Button button3, @NonNull EditText etAccount,
+  private ActivityMain1Binding(@NonNull LinearLayout rootView, @NonNull Button NFCbutton,
+      @NonNull Button btnLogin, @NonNull Button button3, @NonNull EditText etAccount,
       @NonNull EditText etPassword, @NonNull TextView generalNFC, @NonNull TextView generalQR,
       @NonNull ImageView imgAccount, @NonNull ImageView imgPw, @NonNull ImageView ivSeePassword,
       @NonNull ImageView photo, @NonNull TextView text) {
     this.rootView = rootView;
+    this.NFCbutton = NFCbutton;
     this.btnLogin = btnLogin;
-    this.button2 = button2;
     this.button3 = button3;
     this.etAccount = etAccount;
     this.etPassword = etPassword;
@@ -104,15 +104,15 @@ public final class ActivityMain1Binding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btn_login;
-      Button btnLogin = rootView.findViewById(id);
-      if (btnLogin == null) {
+      id = R.id.NFCbutton;
+      Button NFCbutton = rootView.findViewById(id);
+      if (NFCbutton == null) {
         break missingId;
       }
 
-      id = R.id.button2;
-      Button button2 = rootView.findViewById(id);
-      if (button2 == null) {
+      id = R.id.btn_login;
+      Button btnLogin = rootView.findViewById(id);
+      if (btnLogin == null) {
         break missingId;
       }
 
@@ -176,7 +176,7 @@ public final class ActivityMain1Binding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMain1Binding((LinearLayout) rootView, btnLogin, button2, button3,
+      return new ActivityMain1Binding((LinearLayout) rootView, NFCbutton, btnLogin, button3,
           etAccount, etPassword, generalNFC, generalQR, imgAccount, imgPw, ivSeePassword, photo,
           text);
     }

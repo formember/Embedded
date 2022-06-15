@@ -6,29 +6,29 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="65dp"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:text="登录成功欢迎您！"
             android:gravity="center"
-            android:textSize="@dimen/dp_20"
-            android:text="@string/register_record"
-            android:textColor="@color/result_points" />
+            android:textSize="30sp"
+            />
         <View android:layout_width="match_parent" android:layout_height="@dimen/dp_1"
             android:background="@color/orange_main"
             />
+
         <TextView
             android:id="@+id/text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:textSize="@dimen/dp_20"
             android:text="@string/register_form"
-            android:textColor="@color/result_points" />
+            android:textColor="@color/result_points"
+            android:textSize="@dimen/dp_20" />
     </LinearLayout>
 
     <LinearLayout

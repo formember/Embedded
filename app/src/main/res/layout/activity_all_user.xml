@@ -3,7 +3,16 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="所有用户"
+        android:gravity="center"
+        android:textSize="30sp"
+        />
+    <View android:layout_width="match_parent" android:layout_height="@dimen/dp_1"
+        android:background="@color/orange_main"
+        />
     <ListView
         android:id="@+id/listView"
         android:layout_width="fill_parent"

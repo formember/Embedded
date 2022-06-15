@@ -8,12 +8,24 @@
         "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\capture.xml"
     },
     {
+        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_bind_nfc.xml",
+        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\activity_bind_nfc.xml"
+    },
+    {
+        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_all_user.xml",
+        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\activity_all_user.xml"
+    },
+    {
         "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\main.xml",
         "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\main.xml"
     },
     {
         "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_register.xml",
         "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_nfc.xml",
+        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\activity_nfc.xml"
     },
     {
         "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main1.xml",
@@ -26,5 +38,9 @@
     {
         "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_list.xml",
         "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\item_list.xml"
+    },
+    {
+        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\vlist.xml",
+        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\vlist.xml"
     }
 ]

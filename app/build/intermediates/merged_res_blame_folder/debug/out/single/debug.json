@@ -1,7 +1,11 @@
 [
     {
-        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main1.xml.flat",
-        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\activity_main1.xml"
+        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_nfc.png.flat",
+        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\drawable-mdpi\\nfc.png"
+    },
+    {
+        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_all_user.xml.flat",
+        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\activity_all_user.xml"
     },
     {
         "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_icon.png.flat",
@@ -12,16 +16,48 @@
         "source": "D:\\android\\QRCode\\app\\src\\main\\res\\raw\\beep.ogg"
     },
     {
+        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\layout_imgdalog.xml.flat",
+        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\imgdalog.xml"
+    },
+    {
+        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_nfc.xml.flat",
+        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\activity_nfc.xml"
+    },
+    {
+        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\layout_main.xml.flat",
+        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\drawable_image_password_bg.xml.flat",
+        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\drawable\\image_password_bg.xml"
+    },
+    {
+        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_bind_nfc.xml.flat",
+        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\activity_bind_nfc.xml"
+    },
+    {
+        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_icon.png.flat",
+        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\drawable-mdpi\\icon.png"
+    },
+    {
+        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\drawable_buttonstytle.xml.flat",
+        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\drawable\\buttonstytle.xml"
+    },
+    {
+        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main1.xml.flat",
+        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\activity_main1.xml"
+    },
+    {
+        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\layout_vlist.xml.flat",
+        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\vlist.xml"
+    },
+    {
         "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_icon_login_pw.png.flat",
         "source": "D:\\android\\QRCode\\app\\src\\main\\res\\drawable-mdpi\\icon_login_pw.png"
     },
     {
         "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_record.xml.flat",
         "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\activity_record.xml"
-    },
-    {
-        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\layout_imgdalog.xml.flat",
-        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\imgdalog.xml"
     },
     {
         "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_icon_nosee_pass.png.flat",
@@ -40,20 +76,16 @@
         "source": "D:\\android\\QRCode\\app\\src\\main\\res\\raw\\realm_properties"
     },
     {
+        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\drawable_list_line.xml.flat",
+        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\drawable\\list_line.xml"
+    },
+    {
         "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_icon.png.flat",
         "source": "D:\\android\\QRCode\\app\\src\\main\\res\\drawable-ldpi\\icon.png"
     },
     {
         "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_list.xml.flat",
         "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\item_list.xml"
-    },
-    {
-        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\layout_main.xml.flat",
-        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\main.xml"
-    },
-    {
-        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\drawable_image_password_bg.xml.flat",
-        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\drawable\\image_password_bg.xml"
     },
     {
         "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_icon_see_pass.png.flat",
@@ -66,13 +98,5 @@
     {
         "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_register.xml.flat",
         "source": "D:\\android\\QRCode\\app\\src\\main\\res\\layout\\activity_register.xml"
-    },
-    {
-        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_icon.png.flat",
-        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\drawable-mdpi\\icon.png"
-    },
-    {
-        "merged": "D:\\android\\QRCode\\app\\build\\intermediates\\res\\merged\\debug\\drawable_buttonstytle.xml.flat",
-        "source": "D:\\android\\QRCode\\app\\src\\main\\res\\drawable\\buttonstytle.xml"
     }
 ]

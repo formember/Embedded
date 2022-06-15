@@ -8,12 +8,14 @@
         <entry key="..\:/android/QRCode/app/src/main/res/drawable/image_password_bg.xml" value="0.1" />
         <entry key="..\:/android/QRCode/app/src/main/res/drawable/list_line.xml" value="0.275" />
         <entry key="..\:/android/QRCode/app/src/main/res/layout/activity_all_user.xml" value="0.25885416666666666" />
+        <entry key="..\:/android/QRCode/app/src/main/res/layout/activity_bind_nfc.xml" value="0.2" />
         <entry key="..\:/android/QRCode/app/src/main/res/layout/activity_main.xml" value="0.234375" />
-        <entry key="..\:/android/QRCode/app/src/main/res/layout/activity_main1.xml" value="0.4" />
-        <entry key="..\:/android/QRCode/app/src/main/res/layout/activity_nfc.xml" value="0.1" />
+        <entry key="..\:/android/QRCode/app/src/main/res/layout/activity_main1.xml" value="0.536" />
+        <entry key="..\:/android/QRCode/app/src/main/res/layout/activity_nfc.xml" value="0.2" />
         <entry key="..\:/android/QRCode/app/src/main/res/layout/activity_record.xml" value="0.264" />
         <entry key="..\:/android/QRCode/app/src/main/res/layout/activity_register.xml" value="0.4" />
         <entry key="..\:/android/QRCode/app/src/main/res/layout/capture.xml" value="0.33697916666666666" />
+        <entry key="..\:/android/QRCode/app/src/main/res/layout/ids.xml" value="0.45" />
         <entry key="..\:/android/QRCode/app/src/main/res/layout/imgdalog.xml" value="0.11803444782168186" />
         <entry key="..\:/android/QRCode/app/src/main/res/layout/item_list.xml" value="0.4" />
         <entry key="..\:/android/QRCode/app/src/main/res/layout/main.xml" value="0.33697916666666666" />

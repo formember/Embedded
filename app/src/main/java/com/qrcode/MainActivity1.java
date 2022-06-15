@@ -1,14 +1,18 @@
 package com.qrcode;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Build;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
+import android.util.Pair;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -22,15 +26,23 @@ import android.widget.Toast;
 
 import com.database.DBOpenHelper;
 import com.google.zxing.WriterException;
+import com.socket.ClientSocketThread;
+import com.socket.clientSocketTools;
+import com.socket.MessageListener;
 import com.zxing.activity.CaptureActivity;
 import com.zxing.encoding.EncodingHandler;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
+
 public class MainActivity1 extends AppCompatActivity
      implements View.OnClickListener, CompoundButton.OnCheckedChangeListener {
 
+
+    ClientSocketThread clientSocketThread;
+    byte[] buffer={(byte) 0xFE, (byte) 0xE0, 0x08, 0x00, 0x72, 0x00, 0x02, 0x0A};
     public static int NORMALTYPE=1;
     public static int NFCTYPE=2;
     public static int QRTYPE=3;
@@ -38,6 +50,7 @@ public class MainActivity1 extends AppCompatActivity
     private EditText et_password;
     private Button mLoginBtn;
     private Button QRLoginBtn;
+    private Button NFCLoginBtn;
     private ImageView iv_see_password;
     private TextView registerClick;
     private TextView NFCgeneral;
@@ -49,6 +62,7 @@ public class MainActivity1 extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main1);
         dbOpenHelper=new DBOpenHelper(this);
+
         initViews();
         setupEvents();
 
@@ -63,6 +77,7 @@ public class MainActivity1 extends AppCompatActivity
         NFCgeneral= findViewById(R.id.generalNFC);
         QRgeneral=findViewById(R.id.generalQR);
         QRLoginBtn=findViewById(R.id.button3);
+        NFCLoginBtn=findViewById(R.id.NFCbutton);
     }
     private void setupEvents(){
         QRLoginBtn.setOnClickListener(this);
@@ -71,6 +86,7 @@ public class MainActivity1 extends AppCompatActivity
         registerClick.setOnClickListener(this);
         NFCgeneral.setOnClickListener(this);
         QRgeneral.setOnClickListener(this);
+        NFCLoginBtn.setOnClickListener(this);
     }
     @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
     @Override
@@ -83,7 +99,7 @@ public class MainActivity1 extends AppCompatActivity
                 setPasswordVisibility();    //改变图片并设置输入框的文本可见或不可见
                 break;
             case R.id.text:
-                System.out.println("00000000000000");
+
                 Intent intent=new Intent(this, RegisterActivity.class);
                 startActivity(intent);
                 break;
@@ -103,11 +119,22 @@ public class MainActivity1 extends AppCompatActivity
                 startActivityForResult(openCameraIntent, 0);
                 break;
             }
-            case R.id.generalNFC:
-
-
+            case R.id.generalNFC:{
+                Intent intent1 = new Intent(MainActivity1.this, AllUserActivity.class);
+                startActivity(intent1);
+                break;
+            }
+            case R.id.NFCbutton:{
+                NFClogin();
+                break;
+            }
 
         }
+    }
+
+    private void NFClogin(){
+        Intent intent=new Intent(this, NFCActivity.class);
+        startActivity(intent);
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -118,6 +145,55 @@ public class MainActivity1 extends AppCompatActivity
             try {
                 JSONObject object=new JSONObject(scanResult);
                 if(dbOpenHelper.login(object.get("account").toString(),object.get("password").toString(),QRTYPE)){
+                    final byte[] blights = {(byte) 0x21, (byte) 0x12, (byte) 0x14};
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            clientSocketThread=ClientSocketThread.getClientSocket(clientSocketTools.getLocalIpAddress(),6109);
+                            // 步进电机一直在旋转
+                            buffer[3] = 0x32;
+                            buffer[6] = 0x02;
+                            try {
+                                clientSocketThread.getOutputStream().write(buffer);  // 把buffer写到输出流中，从而传递给服务器
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            // 然后就是流水灯
+                            buffer[3] = 0x44;
+                            for (int i = 0; i < 6; ++i) {
+                                for (int j = 0; j < 3; ++j) {
+                                    buffer[6] = blights[j];
+                                    try {
+                                        clientSocketThread.getOutputStream().write(buffer);  // 把buffer写到输出流中，从而传递给服务器
+                                    } catch (Exception e) {
+                                        e.printStackTrace();
+                                    }
+                                    try {
+                                        Thread.sleep(250);
+                                    }
+                                    catch (Exception e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                            }
+                            // 步进电机关闭
+                            buffer[3] = 0x32;
+                            buffer[6] = 0x01;
+                            try {
+                                clientSocketThread.getOutputStream().write(buffer);  // 把buffer写到输出流中，从而传递给服务器
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            // 流水灯关闭
+                            buffer[3] = 0x44;
+                            buffer[6] = 0x00;
+                            try {
+                                clientSocketThread.getOutputStream().write(buffer);  // 把buffer写到输出流中，从而传递给服务器
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }).start();
                     showToast("登录成功！");
                     Intent intent=new Intent(this, RecordActivity.class);
                     intent.putExtra("username",object.get("account").toString());
@@ -154,6 +230,59 @@ public class MainActivity1 extends AppCompatActivity
             return;
         }
         if(dbOpenHelper.login(account,password,NORMALTYPE)){
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    // 打开蜂鸣器
+                    try {
+                        Runtime.getRuntime().exec("ioctl -d /dev/ledtest 0 4");
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+                    // 设置一些LED灯的样式
+                    String execOpen = "ioctl -d /dev/ledtest 1 ";
+                    String execClose = "ioctl -d /dev/ledtest 0 ";
+                    int t;
+                    for (int i = 0; i < 3; i++) {
+                        for (int j = 0; j < 4; ++j) {
+                            t=j;
+                            if (i % 2 != 0)
+                                t = 3 - j;
+                            // 打开LED灯
+                            try {
+                                Runtime.getRuntime().exec(execOpen + Integer.toString(t));
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                            // 暂停一会
+                            try {
+                                Thread.sleep(50);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            // 关闭LED灯
+                            try {
+                                Runtime.getRuntime().exec(execClose + Integer.toString(t));
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                            // 暂停一会
+                            try {
+                                Thread.sleep(300);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                    // 关闭蜂鸣器
+                    try {
+                        Runtime.getRuntime().exec("ioctl -d /dev/ledtest 1 4");
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }).start();
             showToast("登录成功！");
             Intent intent=new Intent(this, RecordActivity.class);
             intent.putExtra("username",account);
@@ -180,7 +309,7 @@ public class MainActivity1 extends AppCompatActivity
             object.put("account",account);
             object.put("password",password);
             String jsonStr = object.toString();
-            System.out.println(jsonStr);
+//            System.out.println(jsonStr);
             Bitmap qrCodeBitmap = EncodingHandler.createQRCode(jsonStr, 500);
             Context context = MainActivity1.this;
             dia = new Dialog(context, R.style.edit_AlertDialog_style);

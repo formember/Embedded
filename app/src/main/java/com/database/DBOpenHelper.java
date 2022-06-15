@@ -150,6 +150,7 @@ public class DBOpenHelper extends SQLiteOpenHelper {
         User user=getUser(username);
         SQLiteDatabase db = this.getReadableDatabase();
         SQLiteDatabase db1 = this.getWritableDatabase();
+
         Cursor cursor = db.query(NFC.TABLE_NAME,
                 new String[]{NFC.COLUMN_NFC_ID, NFC.COLUMN_USERID, NFC.COLUMN_NFC},
                 NFC.COLUMN_NFC + "=?",
@@ -173,22 +174,38 @@ public class DBOpenHelper extends SQLiteOpenHelper {
         }
     }
 
-    public boolean login_by_nfc(String nfc){
+    public Pair<String,Boolean> login_by_nfc(String nfc){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(NFC.TABLE_NAME,
                 new String[]{NFC.COLUMN_NFC_ID, NFC.COLUMN_USERID, NFC.COLUMN_NFC},
                 NFC.COLUMN_NFC + "=?",
                 new String[]{String.valueOf(nfc)}, null, null, null, null);
+
+
         if (cursor.moveToFirst()){
+            cursor.moveToFirst();
             Date date = new Date();
             insertExcord(cursor.getInt(cursor.getColumnIndex(NFC.COLUMN_USERID)),date, MainActivity1.NFCTYPE);
-            return true;
+            SQLiteDatabase db1 = this.getReadableDatabase();
+            Cursor cursor1 = db1.query(User.TABLE_NAME,
+                    new String[]{User.COLUMN_ID, User.COLUMN_USERNAME, User.COLUMN_PASSWORD,User.COLUMN_AGE},
+                    User.COLUMN_ID + "=?",
+                    new String[]{String.valueOf(cursor.getInt(cursor.getColumnIndex(NFC.COLUMN_USERID)))}, null, null, null, null);
+            if(cursor1.moveToFirst()){
+                cursor1.moveToFirst();
+                Pair<String,Boolean> newPair=new Pair<String,Boolean>(cursor1.getString(cursor1.getColumnIndex(User.COLUMN_USERNAME)),true);
+                return newPair;
+            }
+            else{
+                Pair<String,Boolean> newPair=new Pair<String,Boolean>("",false);
+                return newPair;
+            }
         }else
         {
-            return false;
+            Pair<String,Boolean> newPair=new Pair<String,Boolean>("",false);
+            return newPair;
         }
     }
-
     public boolean login(String username,String password,int type){
         SQLiteDatabase db = this.getReadableDatabase();
 

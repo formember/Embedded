@@ -1448,9 +1448,11 @@ drawable icon_login_pw
 drawable icon_nosee_pass
 drawable icon_see_pass
 drawable image_password_bg
+drawable list_line
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
+drawable nfc
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -1469,6 +1471,7 @@ id ALT
 id CTRL
 id FUNCTION
 id META
+id NFCbutton
 id NO_DEBUG
 id SHIFT
 id SHOW_ALL
@@ -1516,12 +1519,12 @@ id beginning
 id blocking
 id bottom
 id bounce
+id btn
 id btn_add_qrcode
 id btn_cancel_scan
 id btn_login
 id btn_register
 id btn_scan_barcode
-id button2
 id button3
 id buttonPanel
 id cache_measures
@@ -1609,6 +1612,8 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
+id imageView2
 id img_account
 id img_age
 id img_pw
@@ -1633,7 +1638,10 @@ id line3
 id linear
 id list1
 id listMode
+id listView
 id list_item
+id mBtn
+id mTv
 id masked
 id message
 id middle
@@ -1645,6 +1653,8 @@ id multiply
 id nav_controller_view_tag
 id navigation_header_container
 id never
+id nfclogin
+id nfclogin1
 id none
 id normal
 id notification_background
@@ -1739,6 +1749,7 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1819,7 +1830,10 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_all_user
+layout activity_bind_nfc
 layout activity_main1
+layout activity_nfc
 layout activity_record
 layout activity_register
 layout capture
@@ -1852,6 +1866,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout vlist
 raw beep
 raw realm_properties
 string NFC

@@ -17,80 +17,107 @@
 12    <uses-permission android:name="android.permission.CAMERA" />
 12-->D:\android\QRCode\app\src\main\AndroidManifest.xml:11:5-65
 12-->D:\android\QRCode\app\src\main\AndroidManifest.xml:11:22-62
-13
-14    <uses-feature android:name="android.hardware.camera" /> <!-- 使用照相机权限 -->
-14-->D:\android\QRCode\app\src\main\AndroidManifest.xml:13:5-60
-14-->D:\android\QRCode\app\src\main\AndroidManifest.xml:13:19-57
-15    <uses-feature android:name="android.hardware.camera.autofocus" />
-15-->D:\android\QRCode\app\src\main\AndroidManifest.xml:14:5-70
-15-->D:\android\QRCode\app\src\main\AndroidManifest.xml:14:19-67
-16
-17    <application
-17-->D:\android\QRCode\app\src\main\AndroidManifest.xml:16:5-49:19
-18        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
-18-->[com.android.support:support-compat:28.0.0] D:\android\gradle\wrapper\caches\transforms-3\11d91b67e7ed32b57a0519f5d942004e\transformed\support-compat-28.0.0\AndroidManifest.xml:22:18-91
-19        android:debuggable="true"
-20        android:icon="@drawable/icon"
-20-->D:\android\QRCode\app\src\main\AndroidManifest.xml:17:9-38
-21        android:label="@string/app_name"
-21-->D:\android\QRCode\app\src\main\AndroidManifest.xml:18:9-41
-22        android:testOnly="true" >
-23        <activity
-23-->D:\android\QRCode\app\src\main\AndroidManifest.xml:19:9-22:71
-24            android:name="com.qrcode.RecordActivity"
-24-->D:\android\QRCode\app\src\main\AndroidManifest.xml:20:13-43
-25            android:exported="true"
-25-->D:\android\QRCode\app\src\main\AndroidManifest.xml:21:13-36
-26            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-26-->D:\android\QRCode\app\src\main\AndroidManifest.xml:22:13-69
-27        <activity
-27-->D:\android\QRCode\app\src\main\AndroidManifest.xml:23:9-26:72
-28            android:name="com.qrcode.RegisterActivity"
-28-->D:\android\QRCode\app\src\main\AndroidManifest.xml:24:13-45
-29            android:exported="true"
-29-->D:\android\QRCode\app\src\main\AndroidManifest.xml:25:13-36
-30            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-30-->D:\android\QRCode\app\src\main\AndroidManifest.xml:26:13-69
-31        <activity
-31-->D:\android\QRCode\app\src\main\AndroidManifest.xml:27:9-29:39
-32            android:name="com.qrcode.MainActivity"
-32-->D:\android\QRCode\app\src\main\AndroidManifest.xml:28:13-41
-33            android:exported="true" /> <!-- <activity -->
-33-->D:\android\QRCode\app\src\main\AndroidManifest.xml:29:13-36
-34        <!-- android:name="com.MainActivity" -->
-35        <!-- android:exported="true" /> -->
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->D:\android\QRCode\app\src\main\AndroidManifest.xml:12:5-66
+13-->D:\android\QRCode\app\src\main\AndroidManifest.xml:12:22-64
+14
+15    <uses-feature android:name="android.hardware.camera" /> <!-- 使用照相机权限 -->
+15-->D:\android\QRCode\app\src\main\AndroidManifest.xml:13:5-60
+15-->D:\android\QRCode\app\src\main\AndroidManifest.xml:13:19-57
+16    <uses-feature android:name="android.hardware.camera.autofocus" />
+16-->D:\android\QRCode\app\src\main\AndroidManifest.xml:14:5-70
+16-->D:\android\QRCode\app\src\main\AndroidManifest.xml:14:19-67
+17
+18    <application
+18-->D:\android\QRCode\app\src\main\AndroidManifest.xml:16:5-61:19
+19        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+19-->[com.android.support:support-compat:28.0.0] D:\android\gradle\wrapper\caches\transforms-3\11d91b67e7ed32b57a0519f5d942004e\transformed\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+20        android:debuggable="true"
+21        android:icon="@drawable/icon"
+21-->D:\android\QRCode\app\src\main\AndroidManifest.xml:17:9-38
+22        android:label="@string/app_name"
+22-->D:\android\QRCode\app\src\main\AndroidManifest.xml:18:9-41
+23        android:testOnly="true" >
+24        <activity
+24-->D:\android\QRCode\app\src\main\AndroidManifest.xml:19:9-22:71
+25            android:name="com.qrcode.BindNFCActivity"
+25-->D:\android\QRCode\app\src\main\AndroidManifest.xml:20:13-44
+26            android:exported="true"
+26-->D:\android\QRCode\app\src\main\AndroidManifest.xml:21:13-36
+27            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+27-->D:\android\QRCode\app\src\main\AndroidManifest.xml:22:13-69
+28        <activity
+28-->D:\android\QRCode\app\src\main\AndroidManifest.xml:23:9-26:71
+29            android:name="com.qrcode.AllUserActivity"
+29-->D:\android\QRCode\app\src\main\AndroidManifest.xml:24:13-44
+30            android:exported="true"
+30-->D:\android\QRCode\app\src\main\AndroidManifest.xml:25:13-36
+31            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+31-->D:\android\QRCode\app\src\main\AndroidManifest.xml:26:13-69
+32        <activity
+32-->D:\android\QRCode\app\src\main\AndroidManifest.xml:27:9-30:71
+33            android:name="com.qrcode.NFCActivity"
+33-->D:\android\QRCode\app\src\main\AndroidManifest.xml:28:13-40
+34            android:exported="true"
+34-->D:\android\QRCode\app\src\main\AndroidManifest.xml:29:13-36
+35            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+35-->D:\android\QRCode\app\src\main\AndroidManifest.xml:30:13-69
 36        <activity
-36-->D:\android\QRCode\app\src\main\AndroidManifest.xml:32:9-41:20
-37            android:name="com.qrcode.MainActivity1"
-37-->D:\android\QRCode\app\src\main\AndroidManifest.xml:33:13-42
-38            android:label="@string/app_name"
-38-->D:\android\QRCode\app\src\main\AndroidManifest.xml:34:13-45
-39            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-39-->D:\android\QRCode\app\src\main\AndroidManifest.xml:35:13-69
-40            <intent-filter>
-40-->D:\android\QRCode\app\src\main\AndroidManifest.xml:36:13-40:29
-41                <action android:name="android.intent.action.MAIN" />
-41-->D:\android\QRCode\app\src\main\AndroidManifest.xml:37:17-69
-41-->D:\android\QRCode\app\src\main\AndroidManifest.xml:37:25-66
-42
-43                <category android:name="android.intent.category.LAUNCHER" />
-43-->D:\android\QRCode\app\src\main\AndroidManifest.xml:39:17-77
-43-->D:\android\QRCode\app\src\main\AndroidManifest.xml:39:27-74
-44            </intent-filter>
-45        </activity> <!-- 隐藏键盘 -->
-46        <!-- 全屏 -->
-47        <activity
-47-->D:\android\QRCode\app\src\main\AndroidManifest.xml:43:9-48:63
-48            android:name="com.zxing.activity.CaptureActivity"
-48-->D:\android\QRCode\app\src\main\AndroidManifest.xml:44:13-62
-49            android:configChanges="orientation|keyboardHidden"
-49-->D:\android\QRCode\app\src\main\AndroidManifest.xml:45:13-63
-50            android:screenOrientation="portrait"
-50-->D:\android\QRCode\app\src\main\AndroidManifest.xml:46:13-49
-51            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-51-->D:\android\QRCode\app\src\main\AndroidManifest.xml:47:13-71
-52            android:windowSoftInputMode="stateAlwaysHidden" />
-52-->D:\android\QRCode\app\src\main\AndroidManifest.xml:48:13-60
-53    </application>
-54
-55</manifest>
+36-->D:\android\QRCode\app\src\main\AndroidManifest.xml:31:9-34:72
+37            android:name="com.qrcode.RecordActivity"
+37-->D:\android\QRCode\app\src\main\AndroidManifest.xml:32:13-43
+38            android:exported="true"
+38-->D:\android\QRCode\app\src\main\AndroidManifest.xml:33:13-36
+39            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+39-->D:\android\QRCode\app\src\main\AndroidManifest.xml:34:13-69
+40        <activity
+40-->D:\android\QRCode\app\src\main\AndroidManifest.xml:35:9-38:72
+41            android:name="com.qrcode.RegisterActivity"
+41-->D:\android\QRCode\app\src\main\AndroidManifest.xml:36:13-45
+42            android:exported="true"
+42-->D:\android\QRCode\app\src\main\AndroidManifest.xml:37:13-36
+43            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+43-->D:\android\QRCode\app\src\main\AndroidManifest.xml:38:13-69
+44        <activity
+44-->D:\android\QRCode\app\src\main\AndroidManifest.xml:39:9-41:39
+45            android:name="com.qrcode.MainActivity"
+45-->D:\android\QRCode\app\src\main\AndroidManifest.xml:40:13-41
+46            android:exported="true" /> <!-- <activity -->
+46-->D:\android\QRCode\app\src\main\AndroidManifest.xml:41:13-36
+47        <!-- android:name="com.MainActivity" -->
+48        <!-- android:exported="true" /> -->
+49        <activity
+49-->D:\android\QRCode\app\src\main\AndroidManifest.xml:44:9-53:20
+50            android:name="com.qrcode.MainActivity1"
+50-->D:\android\QRCode\app\src\main\AndroidManifest.xml:45:13-42
+51            android:label="@string/app_name"
+51-->D:\android\QRCode\app\src\main\AndroidManifest.xml:46:13-45
+52            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+52-->D:\android\QRCode\app\src\main\AndroidManifest.xml:47:13-69
+53            <intent-filter>
+53-->D:\android\QRCode\app\src\main\AndroidManifest.xml:48:13-52:29
+54                <action android:name="android.intent.action.MAIN" />
+54-->D:\android\QRCode\app\src\main\AndroidManifest.xml:49:17-69
+54-->D:\android\QRCode\app\src\main\AndroidManifest.xml:49:25-66
+55
+56                <category android:name="android.intent.category.LAUNCHER" />
+56-->D:\android\QRCode\app\src\main\AndroidManifest.xml:51:17-77
+56-->D:\android\QRCode\app\src\main\AndroidManifest.xml:51:27-74
+57            </intent-filter>
+58        </activity> <!-- 隐藏键盘 -->
+59        <!-- 全屏 -->
+60        <activity
+60-->D:\android\QRCode\app\src\main\AndroidManifest.xml:55:9-60:63
+61            android:name="com.zxing.activity.CaptureActivity"
+61-->D:\android\QRCode\app\src\main\AndroidManifest.xml:56:13-62
+62            android:configChanges="orientation|keyboardHidden"
+62-->D:\android\QRCode\app\src\main\AndroidManifest.xml:57:13-63
+63            android:screenOrientation="portrait"
+63-->D:\android\QRCode\app\src\main\AndroidManifest.xml:58:13-49
+64            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+64-->D:\android\QRCode\app\src\main\AndroidManifest.xml:59:13-71
+65            android:windowSoftInputMode="stateAlwaysHidden" />
+65-->D:\android\QRCode\app\src\main\AndroidManifest.xml:60:13-60
+66    </application>
+67
+68</manifest>
